@@ -12,7 +12,7 @@ from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 #################################################
 # Database Setup
@@ -95,6 +95,26 @@ def samples(sample):
         "otu_labels": sample_data.otu_label.tolist(),
     }
     return jsonify(data)
+
+# Bonus Part
+@app.route("/wfreq/<sample>")
+def wfreq(sample):
+
+    sel = [
+    Samples_Metadata.sample,
+    Samples_Metadata.WFREQ,
+    ]
+
+    results = db.session.query(*sel).filter(Samples_Metadata.sample == sample).all()
+
+    sample_wfreq = {}
+
+    for result in results:
+	
+        sample_wfreq["sample"] = result[0]
+        sample_wfreq["WFREQ"] = result[1]
+
+    return jsonify(sample_wfreq)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,40 @@
+.jumbotron{
+  background: url('../images/bellybutton.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:200px;
+ 
+}
+
+.belly {font-size: 16px; color: #006668; font-weight:bold;}
+
+.panel-body { 
+font-size: 15px;
+color: #006668;}
+
+.panel-title, .samp {
+	color: #006668;
+}
+
+.col-md-12 {padding-left:210px;
+}
+.well ,.panel-heading  {
+	background: url('../images/bio.jpg');
+
+}
+
+.panel{
+	background: url('../images/bio.jpg');
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+body{
+	background: url('../images/body.gif');
+	background-color:#dbe9e9;
+}
+
+select { font-weight:bold;background: url('../images/bio.jpg');color: #006668;}
