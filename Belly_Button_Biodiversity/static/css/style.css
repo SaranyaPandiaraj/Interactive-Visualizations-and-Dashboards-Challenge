@@ -38,3 +38,5 @@ body{
 }
 
 select { font-weight:bold;background: url('../images/bio.jpg');color: #006668;}
+
+.bottom { padding-left:450px; font-weight:bold; text-align:center ;color: #006668;}
